@@ -1,0 +1,89 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Happy name path
+  steps:
+  - intent: tell_name
+  - action: utter_name
+  - action: utter_my_name
+  - intent: my_name
+    entities: 
+    - name: "preethi"
+  - action: utter_mobile_number
+  - intent: mobile_number
+    entities:
+    - number: 123456789
+  - action: utter_user_edu_qual
+  - intent: user_edu_qual
+  - action: utter_carrer_path
+  - intent: state_of_student
+  - action: utter_carrer_reply
+  - intent: what_questions
+  - action: utter_bot_question
+  - intent: ok_questions
+
+
+- story: BE path
+  steps:
+  - intent: ask_question
+  - action: utter_path_question
+  - intent: professionalcoursebtn
+  - action: utter_pc
+  - intent: pc_be
+  - action: utter_pc_be
+  - action: utter_want_pc_be
+  - intent: pc_be_courses
+  - action: utter_pc_be_courses
+
+- story: Medical path
+  steps:
+  - intent: ask_question
+  - action: utter_path_question
+  - intent: professionalcoursebtn
+  - action: utter_pc
+  - intent: pc_medical 
+  - action: utter_pc_medical
+  - action: utter_want_pc_medical
+  - intent: pc_medical_courses
+  - action: utter_pc_medical_courses
+ 
+  
+  - intent: lifesciencebtn
+  - action: utter_lifescience
+
+  - intent: ls_biology
+  - action: utter_ls_biology
+   
+  - intent: ls_phy_chem
+  - action: utter_ls_phy_chem
+  - intent: artsbtn
+  - action: utter_artsbtn
+  

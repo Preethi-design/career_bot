@@ -1,0 +1,33 @@
+version: "2.0"
+stories:
+- story: Story from Conversation ID 17421c56ef0a4842a1252ae3bd19fc15
+  steps:
+  - intent: ask_question
+  - action: utter_path_question
+  - intent: professionalcoursebtn
+  - action: utter_pc
+  - intent: pc_be
+  - action: utter_pc_be
+  - action: utter_want_pc_be
+  - intent: pc_be_courses
+  - action: utter_pc_be_courses
+- story: Story from Conversation ID 2e4aa24bc030439797c056f01a67a38d
+  steps:
+  - intent: ask_question
+  - action: utter_path_question
+  - intent: professionalcoursebtn
+  - action: utter_pc
+  - intent: pc_be
+  - action: utter_pc_be
+  - action: utter_want_pc_be
+  - intent: pc_be_courses
+  - action: utter_pc_be_courses
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

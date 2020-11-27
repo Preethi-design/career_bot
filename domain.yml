@@ -1,0 +1,126 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- tell_name
+- my_name
+- mobile_number
+- user_edu_qual
+- state_of_student
+- what_questions
+- ok_questions
+- professionalcoursebtn
+- lifesciencebtn
+- artsbtn
+- pc_be
+- pc_medical
+- ask_question
+- ls_biology
+- ls_phy_chem
+- pc_be_courses
+- no_need
+- pc_medical_courses
+entities:
+- name
+- number
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_name:
+  - text: i am your career path identifier bot.
+  utter_my_name:
+  - text: what is your name?
+  utter_mobile_number:
+  - text: what is your number?
+  utter_thanks:
+  - text: thanks for providing the values.
+  utter_carrer_path:
+  - text: Have you chosen your career path?
+  utter_user_edu_qual:
+  - text: hi, what are you studying now?
+  utter_carrer_reply:
+  - text: ok I will help you to choose your career path by asking some questions.
+  utter_bot_question:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: The questions are based on your Interest, Personality, Orientation, Aptitude
+      skills.
+  utter_path_question:
+  - buttons:
+    - payload: /professionalcoursebtn
+      title: very good
+    - payload: /lifesciencebtn
+      title: good
+    - payload: /artsbtn
+      title: normal
+    text: Rate yourself in studies
+  utter_pc:
+  - buttons:
+    - payload: /pc_be
+      title: Bachelor of engineering
+    - payload: /pc_medical
+      title: medical
+    text: you are interested in calculating and in medicine field
+  utter_lifescience:
+  - buttons:
+    - payload: /ls_biology
+      title: biology
+    - payload: /ls_phy_chem
+      title: phychem
+    text: its life science
+  utter_pc_be:
+  - text: BE
+  utter_want_pc_be:
+  - buttons:
+    - payload: /pc_be_courses
+      title: Engineering courses
+    - payload: /no_need
+      title: No action
+    text: The BE course are specified bellow
+  utter_want_pc_medical:
+  - buttons:
+    - payload: /pc_medical_courses
+      title: medical course
+    - payload: /no_need
+      title: No action
+    text: The medical course are specified bellow
+  utter_pc_be_courses:
+  - text: "B.E. or B.Tech. in Computer Science – 4 years\nB.E. or B.Tech. in Computer\
+      \ Engineering – 4 years\nB.E. or B.Tech. in Software Engineering – 4 years\n\
+      B.E. or B.Tech. in Computer Science and Engineering – 4 years \nB.E. or B.Tech.\
+      \ Computer and Communication Engineering – 4 years \nIntegrated (B.E./B.Tech.\
+      \ + M.E./M.Tech.) Computer Engineering – 5 years \nBCA (Bachelor of Computer\
+      \ Application) – 3 years \nB.Sc. in Computer Science – 3 years \nB.Sc. in Computer\
+      \ Engineering – 3 years \nB.Sc. in Software Technology – 3 years "
+  utter_pc_medical_courses:
+  - text: "Bachelor of Medicine, Bachelor of Surgery – MBBS\nBachelor of Dental Surgery\
+      \ – BDS\nBachelor of Ayurvedic Medicine and Surgery – BAMS\nBachelor of Homeopathic\
+      \ Medicine and Surgery – BHMS\nBachelor of Unani Medicine and Surgery – BUMS\n\
+      Bachelor of Physiotherapy - B.Pth or BPT\nBachelor of Veterinary Science - B.VSc\n\
+      Bachelor of Naturopathy and Yoga – BNYS\nBachelor of Siddha Medicine and Surgery\
+      \ – BSMS"
+  utter_pc_medical:
+  - text: medical field
+  utter_artsbtn:
+  - text: arts and science
+  utter_ls_biology:
+  - text: botany and zoology
+  utter_ls_phy_chem:
+  - text: physics and chemistry
