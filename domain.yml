@@ -27,6 +27,12 @@ intents:
 - pc_be_courses
 - no_need
 - pc_medical_courses
+- all_pc_be
+- pc_be_civil
+- pc_be_mechanical
+- pc_be_electrical
+- pc_be_computer
+- pc_be_civil_master
 entities:
 - name
 - number
@@ -46,6 +52,8 @@ responses:
   - text: I am a bot, powered by Rasa.
   utter_name:
   - text: i am your career path identifier bot.
+  utter_out_of_scope:
+  - text: Sorry, I didn't get what you said. please rephrase what you said.
   utter_my_name:
   - text: what is your name?
   utter_mobile_number:
@@ -65,18 +73,18 @@ responses:
   utter_path_question:
   - buttons:
     - payload: /professionalcoursebtn
-      title: very good
+      title: Marvellous
     - payload: /lifesciencebtn
-      title: good
+      title: Brilliant
     - payload: /artsbtn
-      title: normal
+      title: Good
     text: Rate yourself in studies
   utter_pc:
   - buttons:
     - payload: /pc_be
       title: Bachelor of engineering
     - payload: /pc_medical
-      title: medical
+      title: Medical
     text: you are interested in calculating and in medicine field
   utter_lifescience:
   - buttons:
@@ -89,11 +97,39 @@ responses:
   - text: BE
   utter_want_pc_be:
   - buttons:
-    - payload: /pc_be_courses
-      title: Engineering courses
+    - payload: /pc_be_civil
+      title: Civil
+    - payload: /pc_be_mechanical
+      title: Mechanical
+    - payload: /pc_be_electrical
+      title: Electrical
+    - payload: /pc_be_computer
+      title: Information and communication
     - payload: /no_need
       title: No action
-    text: The BE course are specified bellow
+    text: select your interested course
+  utter_pc_be_civil:
+  - buttons:
+    - payload: /pc_be_civil_master
+      title: Civil Master Degree
+    - payload: /no_need
+      title: No action
+    text: "B.E Civil Engineering\nB.E Geo Informatics\nB.E Agricultural and Irrigation"
+  utter_pc_be_civil_master:
+  - text: "M.E. Structural Engineering.\nM.E. Construction Engg and Management.\n\
+      M.E. Irrigation Water Management.\nM.E. Hydrology and Water Resources Engg.\n\
+      M.E. Environmental Engineering.\nM.E. Transportation Engineering.\nM.E. Soil\
+      \ Mechanics and Foundation Engg.\nM.E. Environmental Management."
+  utter_pc_be_mechanical:
+  - text: "B.E Mechanical Engineering\nB.E Industrial Engineering\nB.E Manufacturing\
+      \ Engineering\nB.E Mining Engineering\nB.E Prining Technology\nB.E Manufacturing\
+      \ Engineering"
+  utter_pc_be_electrical:
+  - text: "B.E Electrical and Electronics Engineering\nB.E Electronics and Communication\
+      \ Engineering"
+  utter_pc_be_computer:
+  - text: "B.E Computer Science and Engineering\nB.Tech Information Technology\nB.E\
+      \ Biomedical Engineering"
   utter_want_pc_medical:
   - buttons:
     - payload: /pc_medical_courses
@@ -101,14 +137,13 @@ responses:
     - payload: /no_need
       title: No action
     text: The medical course are specified bellow
-  utter_pc_be_courses:
-  - text: "B.E. or B.Tech. in Computer Science – 4 years\nB.E. or B.Tech. in Computer\
-      \ Engineering – 4 years\nB.E. or B.Tech. in Software Engineering – 4 years\n\
-      B.E. or B.Tech. in Computer Science and Engineering – 4 years \nB.E. or B.Tech.\
-      \ Computer and Communication Engineering – 4 years \nIntegrated (B.E./B.Tech.\
-      \ + M.E./M.Tech.) Computer Engineering – 5 years \nBCA (Bachelor of Computer\
-      \ Application) – 3 years \nB.Sc. in Computer Science – 3 years \nB.Sc. in Computer\
-      \ Engineering – 3 years \nB.Sc. in Software Technology – 3 years "
+  utter_all_pc_be:
+  - text: "B.E Computer Science and Engineering\nB.E. or B.Tech. in Software Engineering\n\
+      B.E Electronics and Communication Engineering\nB.Tech Information Technology\n\
+      B.E Biomedical Engineering\nB.E Agricultural and Irrigation\nB.E Mechanical\
+      \ Engineering\nB.E Industrial Engineering\nB.E Manufacturing Engineering\nB.E\
+      \ Mining Engineering\nB.E Prining Technology\nB.E Manufacturing Engineering\n\
+      B.E Electrical and Electronics Engineering\nB.E Civil Engineering\nB.E Geo Informatics"
   utter_pc_medical_courses:
   - text: "Bachelor of Medicine, Bachelor of Surgery – MBBS\nBachelor of Dental Surgery\
       \ – BDS\nBachelor of Ayurvedic Medicine and Surgery – BAMS\nBachelor of Homeopathic\

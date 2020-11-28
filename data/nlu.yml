@@ -164,3 +164,33 @@ nlu:
     - what are the courses
     - display the courses
     - can u specify the courses
+- intent: all_pc_be
+  examples: |
+    - All the courses
+
+# - intent: out_of_scope
+#   examples: |
+#     - i want to order food
+#     - what is 2 + 2?
+#     - who's is president?
+- intent: pc_be_civil
+  examples: |
+    - civil
+- intent: pc_be_mechanical
+  examples: |
+    - mechanical
+    - mech
+- intent: pc_be_electrical
+  examples: |
+    - electrical
+    - ece
+    - eee
+- intent: pc_be_computer
+  examples: |
+    - computer
+    - cse
+    - cs
+- intent: pc_be_civil_master
+  examples: |
+    - master course of civil
+    - masters in civil

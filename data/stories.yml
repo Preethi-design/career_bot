@@ -50,8 +50,7 @@ stories:
   - action: utter_bot_question
   - intent: ok_questions
 
-
-- story: BE path
+- story: BE path for no action
   steps:
   - intent: ask_question
   - action: utter_path_question
@@ -60,8 +59,67 @@ stories:
   - intent: pc_be
   - action: utter_pc_be
   - action: utter_want_pc_be
-  - intent: pc_be_courses
-  - action: utter_pc_be_courses
+  # - intent: pc_be_courses
+  # - action: utter_pc_be_courses
+  # - intent: all_pc_be
+  # - action: utter_all_pc_be
+  
+
+- story: all the course
+  steps:
+  - intent: all_pc_be
+  - action: utter_all_pc_be
+
+- story: BE path civil
+  steps:
+  - intent: ask_question
+  - action: utter_path_question
+  - intent: professionalcoursebtn
+  - action: utter_pc
+  - intent: pc_be
+  - action: utter_pc_be
+  - action: utter_want_pc_be
+  - intent: pc_be_civil
+  - action: utter_pc_be_civil
+  - intent: pc_be_civil_master
+  - action: utter_pc_be_civil_master
+
+- story: BE path mechanical
+  steps:
+  - intent: ask_question
+  - action: utter_path_question
+  - intent: professionalcoursebtn
+  - action: utter_pc
+  - intent: pc_be
+  - action: utter_pc_be
+  - action: utter_want_pc_be
+  - intent: pc_be_mechanical
+  - action: utter_pc_be_mechanical
+  
+
+- story: BE path electrical
+  steps:
+  - intent: ask_question
+  - action: utter_path_question
+  - intent: professionalcoursebtn
+  - action: utter_pc
+  - intent: pc_be
+  - action: utter_pc_be
+  - action: utter_want_pc_be
+  - intent: pc_be_electrical
+  - action: utter_pc_be_electrical
+
+- story: BE path computer
+  steps:
+  - intent: ask_question
+  - action: utter_path_question
+  - intent: professionalcoursebtn
+  - action: utter_pc
+  - intent: pc_be
+  - action: utter_pc_be
+  - action: utter_want_pc_be
+  - intent: pc_be_computer
+  - action: utter_pc_be_computer
 
 - story: Medical path
   steps:
