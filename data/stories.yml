@@ -53,8 +53,8 @@ stories:
 - story: BE path for no action
   steps:
   - intent: ask_question
-  - action: utter_path_question
-  - intent: professionalcoursebtn
+  - action: utter_pathquestion
+  - intent: professionalbtn
   - action: utter_pc
   - intent: pc_be
   - action: utter_pc_be
@@ -64,17 +64,75 @@ stories:
   # - intent: all_pc_be
   # - action: utter_all_pc_be
   
-
+# - story: Button1 PCM
+#   steps:
+#   - intent: ask_question
+#   - action: utter_pathquestion
+#   - intent: professionalbtn
+#   - action: utter_pcmcl
+#   - intent: physics
+#   - action: utter_subject
+#   - action: utter_lang
+#   - intent: lan1
 - story: all the course
   steps:
   - intent: all_pc_be
   - action: utter_all_pc_be
 
-- story: BE path civil
+- story: BE path civil entrance with college
   steps:
   - intent: ask_question
-  - action: utter_path_question
-  - intent: professionalcoursebtn
+  - action: utter_pathquestion
+  - intent: professionalbtn
+  - action: utter_pc
+  - intent: pc_be
+  - action: utter_pc_be
+  - action: utter_want_pc_be
+  - intent: pc_be_civil
+  - action: utter_pc_be_civil
+  - intent: civil_entrance
+  - action: utter_civil_entrance
+  - intent: civil_clg
+  - action: utter_civil_clg
+
+- story: BE path civil entrance with master
+  steps:
+  - intent: ask_question
+  - action: utter_pathquestion
+  - intent: professionalbtn
+  - action: utter_pc
+  - intent: pc_be
+  - action: utter_pc_be
+  - action: utter_want_pc_be
+  - intent: pc_be_civil
+  - action: utter_pc_be_civil
+  - intent: civil_entrance
+  - action: utter_civil_entrance
+  - intent: civil_clg
+  - action: utter_civil_clg
+  - intent: pc_be_civil_master
+  - action: utter_pc_be_civil_master
+
+- story: BE path civil college
+  steps:
+  - intent: ask_question
+  - action: utter_pathquestion
+  - intent: professionalbtn
+  - action: utter_pc
+  - intent: pc_be
+  - action: utter_pc_be
+  - action: utter_want_pc_be
+  - intent: pc_be_civil
+  - action: utter_pc_be_civil
+  - intent: civil_clg
+  - action: utter_civil_clg
+
+
+- story: BE path civil master
+  steps:
+  - intent: ask_question
+  - action: utter_pathquestion
+  - intent: professionalbtn
   - action: utter_pc
   - intent: pc_be
   - action: utter_pc_be
@@ -83,12 +141,13 @@ stories:
   - action: utter_pc_be_civil
   - intent: pc_be_civil_master
   - action: utter_pc_be_civil_master
+  
 
 - story: BE path mechanical
   steps:
   - intent: ask_question
-  - action: utter_path_question
-  - intent: professionalcoursebtn
+  - action: utter_pathquestion
+  - intent: professionalbtn
   - action: utter_pc
   - intent: pc_be
   - action: utter_pc_be
@@ -100,8 +159,8 @@ stories:
 - story: BE path electrical
   steps:
   - intent: ask_question
-  - action: utter_path_question
-  - intent: professionalcoursebtn
+  - action: utter_pathquestion
+  - intent: professionalbtn
   - action: utter_pc
   - intent: pc_be
   - action: utter_pc_be
@@ -112,8 +171,8 @@ stories:
 - story: BE path computer
   steps:
   - intent: ask_question
-  - action: utter_path_question
-  - intent: professionalcoursebtn
+  - action: utter_pathquestion
+  - intent: professionalbtn
   - action: utter_pc
   - intent: pc_be
   - action: utter_pc_be
@@ -124,8 +183,8 @@ stories:
 - story: Medical path
   steps:
   - intent: ask_question
-  - action: utter_path_question
-  - intent: professionalcoursebtn
+  - action: utter_pathquestion
+  - intent: professionalbtn
   - action: utter_pc
   - intent: pc_medical 
   - action: utter_pc_medical

@@ -16,7 +16,7 @@ intents:
 - state_of_student
 - what_questions
 - ok_questions
-- professionalcoursebtn
+- professionalbtn
 - lifesciencebtn
 - artsbtn
 - pc_be
@@ -33,6 +33,20 @@ intents:
 - pc_be_electrical
 - pc_be_computer
 - pc_be_civil_master
+- civil_entrance
+- civil_clg
+- history
+- physics
+- chemistry
+- maths
+- computer
+- language
+- lan1
+- lan2
+- lan3
+- lan4
+- lan5
+
 entities:
 - name
 - number
@@ -68,24 +82,67 @@ responses:
   - text: ok I will help you to choose your career path by asking some questions.
   utter_bot_question:
   - image: https://i.imgur.com/nGF1K8f.jpg
-    text: The questions are based on your Interest, Personality, Orientation, Aptitude
-      skills.
-  utter_path_question:
+    text: Shall we begin?
+  # utter_path_question:
+  # - buttons:
+  #   - payload: /professionalbtn
+  #     title: PCM (Physics, Chemistry, Maths)
+  #   - payload: /lifesciencebtn
+  #     title: PCB (Physics, Chemistry, Biology)
+  #   - payload: /artsbtn
+  #     title: Commerce (Commerce, Economics)
+  #   - payload: /history
+  #     title: History (History)
+  #   text: Choose your stream in 12th
+  utter_pathquestion:
   - buttons:
-    - payload: /professionalcoursebtn
-      title: Marvellous
+    - payload: /professionalbtn
+      title: pcm
     - payload: /lifesciencebtn
-      title: Brilliant
+      title: pcb
     - payload: /artsbtn
-      title: Good
-    text: Rate yourself in studies
+      title: commerce
+    - payload: /history
+      title: history
+    text: choose ur stream
+  utter_pcmcl:
+  - buttons:
+    - payload: /physics
+      title: Physics
+    - payload: /chemistry
+      title: Chemistry
+    - payload: /maths
+      title: Maths
+    - payload: /computer
+      title: Computer
+    - payload: /language
+      title: language
+    text: What subject do you like most?
+
+  utter_subject:
+  - text: Choose your interest level in each of the subject
+
+  utter_lang:
+  - buttons:
+    - payload: /lan1
+      title: one
+    - payload: /lan2
+      title: two
+    - payload: /lan3
+      title: three
+    - payload: /lan4
+      title: four
+    - payload: /lan5
+      title: five
+    text: Language
+
   utter_pc:
   - buttons:
     - payload: /pc_be
       title: Bachelor of engineering
     - payload: /pc_medical
       title: Medical
-    text: you are interested in calculating and in medicine field
+    text: you are interested in calculating and in medicine field choose any of one
   utter_lifescience:
   - buttons:
     - payload: /ls_biology
@@ -107,14 +164,35 @@ responses:
       title: Information and communication
     - payload: /no_need
       title: No action
-    text: select your interested course
+    text: select your interested domain course
   utter_pc_be_civil:
   - buttons:
+    - payload: /civil_clg
+      title: Civil Engineering College
+    - payload: /civil_entrance
+      title: Click here to get more information about civil engineering entrance exam
     - payload: /pc_be_civil_master
-      title: Civil Master Degree
-    - payload: /no_need
-      title: No action
+      title: click here to see Civil Master Degree course
     text: "B.E Civil Engineering\nB.E Geo Informatics\nB.E Agricultural and Irrigation"
+  utter_civil_clg:
+  - text: "Indian Institute of Technology Madras\nNational Institute of Technology\
+      \ Tiruchirappalli\nAnna University, Chennai\nVellore Institute of Technology,\
+      \ Vellore\nAmrita School of Engineering, Coimbatore\nAmrita Vishwa Vidyapeetham,\
+      \ Coimbatore\nSRM ENGINEERING COLLEGE, KANCHIPURAM\nSSN COLLEGE OF ENGINEERING\
+      \ - [SSNCE], CHENNAI\nP.S.G COLLEGE OF TECHNOLOGY - [PSGCT], COIMBATORE\nSASTRA\
+      \ UNIVERSITY, THANJAVUR\nSATHYABAMA INSTITUTE OF SCIENCE AND TECHNOLOGY, CHENNAI"
+  utter_civil_entrance:
+  - buttons:
+    - payload: /civil_clg
+      title: Civil Engineering College
+    - payload: /pc_be_civil_master
+      title: click here to see Civil Master Degree course
+    text: "All India Common Entrance Test (AICET)\nAll India Engineering Entrance\
+      \ Exams (AIEEE)\nAmrita Schools of Engineering BTech Entrance Exam\nBirla Institute\
+      \ of Technology and Science Examination (BITSAT)\nIndian Institute of Technology\
+      \ Joint Entrance Exam (IIT JEE)\nNational Institute of Technology\nTamil Nadu\
+      \ Professional Courses Entrance Examination (TNPCEE)\nVellore Institute of Technology\
+      \ Engineering Entrance Exam"
   utter_pc_be_civil_master:
   - text: "M.E. Structural Engineering.\nM.E. Construction Engg and Management.\n\
       M.E. Irrigation Water Management.\nM.E. Hydrology and Water Resources Engg.\n\

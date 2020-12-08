@@ -131,14 +131,45 @@ nlu:
   examples: |
     - ask question
     - start question
-- intent: professionalcoursebtn
+- intent: yes_user
+  examples: |
+    - yes
+    - s
+
+- intent: professionalbtn
   examples: |
     - professional course
+    
 - intent: lifesciencebtn
   examples: |
     - life science
     - life oriented
     - living
+- intent: lan1
+  examples: |
+    - lan1
+    - language1
+    - 1 star
+- intent: lan2
+  examples: |
+    - lan2
+    - language2
+    - 2 star
+- intent: lan3
+  examples: |
+    - lan3
+    - language3
+    - 3 star
+- intent: lan4
+  examples: |
+    - lan4
+    - language4
+    - 4 star
+- intent: lan5
+  examples: |
+    - lan5
+    - language5
+    - 5 star
 - intent: artsbtn
   examples: |
     - fashion
@@ -167,7 +198,31 @@ nlu:
 - intent: all_pc_be
   examples: |
     - All the courses
-
+- intent: history
+  examples: |
+    - history
+    - History
+    - His
+- intent: physics
+  examples: |
+    - physics
+    - phy
+- intent: chemistry
+  examples: |
+    - chem
+    - chemistry
+- intent: maths
+  examples: |
+    - math
+    - maths
+- intent: computer
+  examples: |
+    - computer
+    - cse
+- intent: language
+  examples: |
+    - language
+    - lan
 # - intent: out_of_scope
 #   examples: |
 #     - i want to order food
@@ -194,3 +249,11 @@ nlu:
   examples: |
     - master course of civil
     - masters in civil
+- intent: civil_clg
+  examples: |
+    - civil engineering college
+    - civil department
+- intent: civil_entrance
+  examples: |
+    - civil entrance exam
+    - entrance exam for civil
